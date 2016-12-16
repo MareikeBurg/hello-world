@@ -1,0 +1,16 @@
+public class Rekursion {
+    public static void main (String [] args ) {
+        int n = Integer.parseInt(args[0]);
+        System.out.println(compute(n));
+    }
+    
+    public static int compute (int n) {
+        return computeInternal(n, 1, 1);
+    }
+    
+    private static int computeInternal (int n, int i, int res) {
+        if(i==n)
+            return res;
+        return computeInternal(n, i+1, res+i+i+1);
+    }
+}
